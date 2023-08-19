@@ -126,10 +126,10 @@ document.querySelector('#app').innerHTML = `
                 </button>
             </div>
         </div>
-       
 
     </div>
 
+    <!-- cart and profile  -->
     <div class="right-icons">
 
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -147,7 +147,24 @@ document.querySelector('#app').innerHTML = `
     </div>
 
 </nav>
-<main class="the-main">MAin</main>
+
+<div class="main-cont">
+    <div class="header-cont">
+        <header>
+            <p>In 15 days</p>
+            <h3>Starfield Digital Premium Edition + Early Access</h3>
+            <p>-25% <span>74.89$</span></p>
+        </header>
+    </div>
+    <main class="the-main">
+        <div class="trend-box">
+            <div class="trend-cont">
+                <h2>Trending</h2>
+                <button>View All</button>
+            </div>
+        </div>
+    </main>
+</div>
 
 <footer class="the-footer">footer</footer>
 </div>

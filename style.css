@@ -38,6 +38,7 @@ a {
   margin: auto;
 }
 
+
 .input-container {
   position: relative;
   display: flex;
@@ -89,7 +90,7 @@ a {
   gap: 10px;
   padding: 20px;
   border: 0px solid #FE7306;
- 
+
 }
 
 .menu-btn {
@@ -107,7 +108,7 @@ a {
   border-radius: 100%;
   outline: none;
   border: none;
- 
+  width: 100%;
   padding: 20px;
   color: white;
 }
@@ -141,26 +142,44 @@ a {
   gap: 20px;
 }
 
-
-
-
-/* The Body CSS  */
-
-main {
-  padding: 5px;
-  position: relative;
+header {
+  max-width: 30vh;
 }
 
+.header-cont {
+  width: 100%;
+  max-width: 60vh;
+  margin: auto;
+}
+
+/* The Body CSS  */
 body {
-  position: relative;
   margin: 0%;
+  color: white;
+  position: relative;
   background-size: cover;
-  min-height: 100vh;
+  /* max-height: 100vh; */
   background-image: url('/tomb-rider.jpg');
   /* background-size: 100% auto; */
   background-repeat: no-repeat;
   background-position: center center;
-  color: white;
+}
+
+.the-main {
+  position: relative;
+  width: 100%;
+  /* height: 40vh; */
+  /* Set an appropriate height */
+  background-image: url('/logos/ef-bg.svg');
+  background-size: cover;
+  background-position: top;
+}
+
+.main-cont {
+  position: relative;
+  height: 100%;
+  align-items: start;
+  display: grid;
 }
 
 .bg::before {
@@ -173,6 +192,32 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   /* Adjust the opacity as needed */
 }
+
+.trend-box {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+}
+
+.trend-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trend-cont h2 {
+  margin: 0;
+}
+
+.trend-cont button {
+  padding: 5px 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 
 footer {
   color: white;
