@@ -23,13 +23,21 @@ a {
   font-size: smaller;
 }
 
+a:hover {
+  color: red
+}
+
 .header-items {
-  display: grid;
+  display: none;
   justify-items: center;
   align-self: center;
   width: 100%;
   gap: 10px;
   justify-content: center;
+
+  @media (min-width: 1024px) {
+    display: grid
+  }
 }
 
 .logo {
@@ -61,7 +69,7 @@ a {
 .search-box {
   display: flex;
   position: relative;
-  min-width: 60vh;
+  /* min-width: 60vh; */
 }
 
 .search {
@@ -199,12 +207,14 @@ h2 {
   align-items: center;
   align-content: center;
   padding: 0 10px;
-  gap: 10px;  
+  gap: 10px;
 }
+
 .plat img {
   border-radius: 100%;
   background-color: #FFAB00;
 }
+
 .plat:hover {
   backdrop-filter: blur(8px);
   background: rgba(246, 245, 245, 0.2);
@@ -218,7 +228,7 @@ h2 {
 .platforms {
   padding: 20px;
   display: grid;
-  gap:10px;
+  gap: 10px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: start;
 }
@@ -231,6 +241,7 @@ body {
   position: relative;
   background-size: cover;
   min-height: 100vh;
+  height: auto;
   background-image: url('/tomb-rider.jpg');
   /* background-size: 100% auto; */
   background-repeat: no-repeat;
@@ -257,6 +268,9 @@ body {
 
 .bg {
   min-height: 100vh;
+  height: fit-content;
+  display: grid;
+  align-content: space-between;
 }
 
 .trending {
@@ -266,8 +280,12 @@ body {
   background-image: url('/logos/ef-bg.svg');
   background-repeat: no-repeat;
   background-position: top;
-  height: 53vh;
+  height: fit-content;
+
   /* width: fit-content; */
+  @media (min-width: 1024px) {
+    height: 53vh;
+  }
 }
 
 .trending-cont {
