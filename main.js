@@ -56,7 +56,7 @@ document.querySelector('#app').innerHTML = `
                                     inkscape:connector-curvature="0" />
                             </g>
                         </svg>
-                        Playstation
+                        X-Box
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="menu-icon">
                             <path stroke-linecap="round" stroke-linejoin="round"
