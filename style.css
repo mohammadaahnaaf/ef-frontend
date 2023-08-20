@@ -4,7 +4,7 @@ nav {
   display: flex;
   position: relative;
   justify-items: center;
-  padding: 25px;
+  padding: 20px;
 }
 
 .links {
@@ -113,6 +113,11 @@ a {
   color: white;
 }
 
+.srch-btn:hover {
+  background-color: red;
+  cursor: pointer;
+}
+
 .menu-btn:hover {
   color: red;
 }
@@ -143,43 +148,100 @@ a {
 }
 
 header {
-  max-width: 30vh;
+  max-width: 50vh;
+  align-content: center;
+  align-items: center;
+  /* display: grid; */
+}
+
+h2 {
+  font-weight: normal;
+  font-size: xx-large;
 }
 
 .header-cont {
+  position: relative;
   width: 100%;
-  max-width: 60vh;
+  max-width: 80%;
+  justify-self: center;
+}
+
+.head-card {
+  max-width: 30%;
+  border-radius: 0.475rem;
+  position: absolute;
+  justify-self: center;
   margin: auto;
+  padding: 20px;
+  margin-left: 40px;
+  background-color: #222C17AA;
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: fit-content;
+}
+
+.platform {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+  border-radius: 0.375rem;
+}
+
+.platform p {
+  font-size: x-small;
+}
+
+.plat {
+  border-radius: 9999px;
+  font-size: small;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 0 10px;
+  gap: 10px;  
+}
+.plat img {
+  border-radius: 100%;
+  background-color: #FFAB00;
+}
+.plat:hover {
+  backdrop-filter: blur(8px);
+  background: rgba(246, 245, 245, 0.2);
+}
+
+.platform-logo {
+  height: 150px;
+  width: 150px;
+}
+
+.platforms {
+  padding: 20px;
+  display: grid;
+  gap:10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: start;
 }
 
 /* The Body CSS  */
 body {
-  margin: 0%;
+  margin: 0;
+  padding: 0;
   color: white;
   position: relative;
   background-size: cover;
-  /* max-height: 100vh; */
+  min-height: 100vh;
   background-image: url('/tomb-rider.jpg');
   /* background-size: 100% auto; */
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.the-main {
-  position: relative;
-  width: 100%;
-  /* height: 40vh; */
-  /* Set an appropriate height */
-  background-image: url('/logos/ef-bg.svg');
-  background-size: cover;
-  background-position: top;
-}
-
 .main-cont {
   position: relative;
-  height: 100%;
   align-items: start;
   display: grid;
+  height: fill;
 }
 
 .bg::before {
@@ -193,32 +255,110 @@ body {
   /* Adjust the opacity as needed */
 }
 
-.trend-box {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 20px;
+.bg {
+  min-height: 100vh;
 }
 
-.trend-cont {
-  display: flex;
+.trending {
+  display: grid;
+  align-content: end;
+  background-size: cover;
+  background-image: url('/logos/ef-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 53vh;
+  /* width: fit-content; */
+}
+
+.trending-cont {
+  position: relative;
+  display: grid;
   justify-content: space-between;
-  align-items: center;
-}
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  max-width: 60%;
+  width: 100%;
+  margin: auto;
+  gap: 20px;
 
-.trend-cont h2 {
-  margin: 0;
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
-
-.trend-cont button {
-  padding: 5px 10px;
-  background-color: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 
 footer {
   color: white;
+}
+
+.title {
+  padding: 20px 0;
+  position: relative;
+  padding: 0%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+
+.card {
+  /* padding: 10px; */
+  display: grid;
+}
+
+.card-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view {
+  height: 40px;
+  padding: 0 10px;
+  border-radius: 0.375rem;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  outline: none;
+  border: rgba(0, 0, 0, 1);
+}
+
+.title h3 {
+  font-size: x-large;
+}
+
+.banner-text {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.banner-text span {
+  font-size: larger;
+}
+
+.days {
+  font-size: x-small;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  width: fit-content;
+}
+
+.img-box {
+  position: relative;
+}
+
+.img-card {
+  border-radius: 0.375rem;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+}
+
+.dis-tag {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  left: -1%;
+  top: 88%;
 }

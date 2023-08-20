@@ -14,19 +14,19 @@ document.querySelector('#app').innerHTML = `
         </div>
 
         <!-- search  -->
-        <!-- <div class="search-box">
+        <div id="searchBox" style="display:none" class="search-box">
             <div class="input-container">
                 <input class="search" type="search" placeholder="Mindcraft, RPG, Multiplayer..." />
                 <text class="sr-text">Advanced search</text>
             </div>
-        </div> -->
+        </div>
 
         <!-- menu button  -->
-        <div class="search-box">
+        <div id="menuBox" class="search-box">
             <div class="input-container">
                 <div class="menu">
                     <!-- PC  -->
-                    <button class="menu-btn">
+                    <button id="menuBtn" class="menu-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke-width="1.5" stroke="currentColor" class="menu-icon">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -41,7 +41,7 @@ document.querySelector('#app').innerHTML = `
                     </button>
 
                     <!-- xbox  -->
-                    <button class="menu-btn">
+                    <button id="menuBtn" class="menu-btn">
                         <svg class="menu-icon" stroke="currentColor" fill="currentColor"
                             xmlns:dc="http://purl.org/dc/elements/1.1/"
                             xmlns:cc="http://creativecommons.org/ns#"
@@ -66,7 +66,7 @@ document.querySelector('#app').innerHTML = `
                     </button>
 
                     <!-- playstations  -->
-                    <button class="menu-btn">
+                    <button id="menuBtn" class="menu-btn">
                         <svg class="menu-icon" xmlns:dc="http://purl.org/dc/elements/1.1/" fill="currentColor"
                             xmlns:cc="http://creativecommons.org/ns#"
                             xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -85,7 +85,7 @@ document.querySelector('#app').innerHTML = `
                     </button>
 
                     <!-- nintendo  -->
-                    <button class="menu-btn">
+                    <button id="toggleButton" type="button" class="menu-btn">
                         <svg version="1.0" class="menu-icon" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 700.0 550.0" fill="currentColor" stroke="currentColor">
                             <g transform="translate(0.000000,900.000000) scale(0.100000,-0.100000)">
@@ -117,7 +117,7 @@ document.querySelector('#app').innerHTML = `
 
                 </div>
                 <!-- search  -->
-                <button class="srch-btn">
+                <button id="searchButton" class="srch-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="menu-icon">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -151,22 +151,228 @@ document.querySelector('#app').innerHTML = `
 <div class="main-cont">
     <div class="header-cont">
         <header>
-            <p>In 15 days</p>
-            <h3>Starfield Digital Premium Edition + Early Access</h3>
-            <p>-25% <span>74.89$</span></p>
+            <p class="days">In 15 days</p>
+            <h2>Starfield Digital Premium Edition + Early Access</h2>
+            <p class="banner-text">
+                <svg style="height: 25px; width:auto;" id="Layer_1" data-name="Layer 1"
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.89 87.67">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: #f7941d;
+                            }
+
+                            .cls-2 {
+                                font-size: 51.09px;
+                                fill: #fff;
+                                font-family: Calibri;
+                            }
+                        </style>
+                    </defs>
+                    <path class="cls-1"
+                        d="M610,403.84H469.65c-5.55,0-10.1-3.78-10.1-8.4V324.56c0-4.62,4.55-8.4,10.1-8.4h111.5c6.74,0,8,3.73,10.09,8.4l28.41,69.77C622.89,402.73,615.56,403.84,610,403.84Z"
+                        transform="translate(-459.55 -316.16)" />
+                    <text class="cls-2" transform="translate(15.89 61.82)">-25%</text>
+                </svg>
+                <span>74.89$</span>
+            </p>
         </header>
     </div>
-    <main class="the-main">
-        <div class="trend-box">
-            <div class="trend-cont">
-                <h2>Trending</h2>
-                <button>View All</button>
+
+    <div id="menuCard" style="display:none" class="head-card">
+        <div class="platform">
+            <p>Platforms</p>
+            <p>View All</p>
+        </div>
+
+        <div class="platforms">
+
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
             </div>
         </div>
-    </main>
+
+        <div class="platform">
+            <p>Prepaid cards</p>
+            <p>View All</p>
+        </div>
+        <div class="platforms">
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+            <div class="plat">
+                <img src="/logos/rockstar.png" height="40" width="40" />
+                <p>Rockstar</p>
+            </div>
+        </div>
+    </div>
 </div>
 
-<footer class="the-footer">footer</footer>
+<div class="trending">
+    <div class="title">
+        <h3>Trending</h3>
+        <button class="view">View All</button>
+    </div>
+    
+    <div class="trending-cont">
+
+        <div class="card">
+            <div class="img-box">
+                <img class="img-card" src="/need-for-speed.jpg" />
+                <div class="dis-tag">
+                    <svg style="height: 25px; width:auto;" id="Layer_1" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.89 87.67">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #FE7306;
+                                }
+
+                                .cls-2 {
+                                    font-size: 51.09px;
+                                    fill: #fff;
+                                    font-family: Calibri;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1"
+                            d="M610,403.84H469.65c-5.55,0-10.1-3.78-10.1-8.4V324.56c0-4.62,4.55-8.4,10.1-8.4h111.5c6.74,0,8,3.73,10.09,8.4l28.41,69.77C622.89,402.73,615.56,403.84,610,403.84Z"
+                            transform="translate(-459.55 -316.16)" />
+                        <text class="cls-2" transform="translate(15.89 61.82)">-26%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-text">
+                <h4> Need For Speed</h4>
+                <p>19.99 $</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img class="img-card" src="/far-cry.jpg" />
+                <div class="dis-tag">
+                    <svg style="height: 25px; width:auto;" id="Layer_1" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.89 87.67">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #FE7306;
+                                }
+
+                                .cls-2 {
+                                    font-size: 51.09px;
+                                    fill: #fff;
+                                    font-family: Calibri;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1"
+                            d="M610,403.84H469.65c-5.55,0-10.1-3.78-10.1-8.4V324.56c0-4.62,4.55-8.4,10.1-8.4h111.5c6.74,0,8,3.73,10.09,8.4l28.41,69.77C622.89,402.73,615.56,403.84,610,403.84Z"
+                            transform="translate(-459.55 -316.16)" />
+                        <text class="cls-2" transform="translate(15.89 61.82)">-23%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-text">
+                <h4> FarCry 3</h4>
+                <p>30.99 $</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="img-box">
+                <img class="img-card" src="/tomb-rider.jpg" />
+                <div class="dis-tag">
+                    <svg style="height: 25px; width:auto;" id="Layer_1" data-name="Layer 1"
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160.89 87.67">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #FE7306;
+                                }
+
+                                .cls-2 {
+                                    font-size: 51.09px;
+                                    fill: #fff;
+                                    font-family: Calibri;
+                                }
+                            </style>
+                        </defs>
+                        <path class="cls-1"
+                            d="M610,403.84H469.65c-5.55,0-10.1-3.78-10.1-8.4V324.56c0-4.62,4.55-8.4,10.1-8.4h111.5c6.74,0,8,3.73,10.09,8.4l28.41,69.77C622.89,402.73,615.56,403.84,610,403.84Z"
+                            transform="translate(-459.55 -316.16)" />
+                        <text class="cls-2" transform="translate(15.89 61.82)">-23%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="card-text">
+                <h4> Tomb Rider</h4>
+                <p>30.99 $</p>
+            </div>
+        </div>
+       
+
+    </div>
+
+</div>
+<footer>Ahnafia</footer>
 </div>
   `
 
+const searchBox = document.getElementById('searchBox');
+const menuBox = document.getElementById('menuBox');
+const searchButton = document.getElementById('searchButton');
+
+const menuBtn = document.getElementById('menuBtn');
+const menuCard = document.getElementById('menuCard');
+
+searchButton.addEventListener('click', () => {
+    if (searchBox.style.display === 'none') {
+        searchBox.style.display = 'block';
+        menuBox.style.display = 'none';
+    } else {
+        searchBox.style.display = 'none';
+        menuBox.style.display = 'block';
+    }
+});
+
+menuBtn.addEventListener('click', () => {
+    if (menuCard.style.display === 'none') {
+        menuCard.style.display = 'block';
+    } else {
+        menuCard.style.display = 'none';
+    }
+});
