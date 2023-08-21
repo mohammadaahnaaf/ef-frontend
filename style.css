@@ -125,8 +125,6 @@ a:hover {
   @media (min-width: 1024px) {
     display: none;
   }
-
-  ;
 }
 
 .logo {
@@ -170,7 +168,7 @@ a:hover {
 .search-boxs {
   display: flex;
   position: relative;
-  min-width: 40vh;
+  min-width: 60vh;
 }
 
 .search {
