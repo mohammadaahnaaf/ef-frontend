@@ -3,8 +3,56 @@
 nav {
   display: flex;
   position: relative;
-  justify-items: center;
   padding: 20px;
+  justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    /* justify-items: center; */
+  }
+}
+
+.mobile-menus {
+  display: grid;
+  position: absolute;
+  min-width: 100%;
+  top: 100px;
+  right: 0%;
+  
+  background-color: #231f20;
+  /* backdrop-filter: blur(8px); */
+  z-index: 30;
+  @media (min-width: 1024px) {
+    display: none
+  }
+}
+#mobile-srch {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 5px 0%;
+  margin-top: 10px;
+  border-radius: 9999px;
+  width: 100%;
+  color: black
+}
+.mobile-items {
+  display: grid;
+  gap:10px;
+  padding: 10px;
+  width: 100%;
+}
+
+.mobile-items a {
+  font-size: x-large;
+  padding: 0% 20px;
+  text-align: center;
+}
+.mobile-items button {
+  outline: none;
+  border: none;
+  font-size: large;
+  padding: 0% 20px;
+  color: white;
+  background: transparent;
+  text-align: center;
 }
 
 .links {
@@ -40,10 +88,39 @@ a:hover {
   }
 }
 
+.mobile-menu {
+  display: grid;
+  width: 100%;
+  gap: 10px;
+
+
+}
+
+.open-menu {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  ;
+}
+
 .logo {
   width: fit-content;
   height: 60px;
   margin: auto;
+}
+
+.icons {
+  height: 60px;
+  width: 60px;
+  color: white
 }
 
 
@@ -70,6 +147,11 @@ a:hover {
   display: flex;
   position: relative;
   /* min-width: 60vh; */
+}
+.search-boxs {
+  display: flex;
+  position: relative;
+  min-width: 50vh;
 }
 
 .search {
@@ -107,8 +189,12 @@ a:hover {
   border: none;
   display: flex;
   align-items: center;
-  gap: 5px;
   color: white;
+  gap:20px;
+  @media (min-width: 1024px) {
+    gap: 5px;
+  }
+
 }
 
 .srch-btn {
@@ -153,6 +239,14 @@ a:hover {
   margin: auto;
   display: flex;
   gap: 20px;
+}
+
+#cart {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 }
 
 header {
